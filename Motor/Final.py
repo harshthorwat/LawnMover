@@ -1,3 +1,4 @@
+# Code for cantrolling four motors using two MDD10A
 import RPi.GPIO as io
 import time
 import curses
@@ -5,13 +6,17 @@ import curses
 io.setmode(io.BCM)
 io.setwarnings(False)
 
-#Driver 1
+# PWM pin is used for Speed control
+# DIR pin is used for Direction control
+# Two motors connected to driver 1 and remaining two are connected to driver 2
+
+# Driver 1
 RightM1PWM=17
 RightM1DIR=22
 LeftM1PWM=18
 LeftM1DIR=23
 
-#Driver 2
+# Driver 2
 RightM2PWM=6
 RightM2DIR=19
 LeftM2PWM=12
@@ -62,13 +67,13 @@ try:
 
 	while  True:
 		char=screen.getch()
-		if char == ord('q'):
+		if char == ord('q'):                       # Quit the program 
 			RightM1pwm.ChangeDutyCycle(0)
 			LeftM1pwm.ChangeDutyCycle(0)
 			RightM2pwm.ChangeDutyCycle(0)
 			LeftM2pwm.ChangeDutyCycle(0)
 			break
-		elif char == curses.KEY_UP:
+		elif char == curses.KEY_UP:                # Move Robot in Forward direction
 			io.output(RightM1DIR,False)
 			RightM1pwm.ChangeDutyCycle(100)
 			io.output(LeftM1DIR,False)
@@ -77,7 +82,7 @@ try:
 			RightM2pwm.ChangeDutyCycle(100)
 			io.output(LeftM2DIR,False)
 			LeftM2pwm.ChangeDutyCycle(100)
-		elif char == curses.KEY_DOWN:
+		elif char == curses.KEY_DOWN:              # Move Robot in Reverse direction
 			io.output(RightM1DIR,True)
 			RightM1pwm.ChangeDutyCycle(100)
 			io.output(LeftM1DIR,True)
@@ -86,7 +91,7 @@ try:
 			RightM2pwm.ChangeDutyCycle(100)
 			io.output(LeftM2DIR,True)
 			LeftM2pwm.ChangeDutyCycle(100)
-		elif char == curses.KEY_LEFT:
+		elif char == curses.KEY_LEFT:             # Left Turn
 			io.output(RightM1DIR,False)
 			RightM1pwm.ChangeDutyCycle(100)
 			io.output(LeftM1DIR,False)
@@ -95,7 +100,7 @@ try:
 			RightM2pwm.ChangeDutyCycle(100)
 			io.output(LeftM2DIR,False)
 			LeftM2pwm.ChangeDutyCycle(0)
-		elif char == curses.KEY_RIGHT:
+		elif char == curses.KEY_RIGHT:             # Right Turn
 			io.output(RightM1DIR,False)
 			RightM1pwm.ChangeDutyCycle(0)
 			io.output(LeftM1DIR,False)
@@ -104,7 +109,7 @@ try:
 			RightM2pwm.ChangeDutyCycle(0)
 			io.output(LeftM2DIR,False)
 			LeftM2pwm.ChangeDutyCycle(100)
-		elif char == ord('s'):
+		elif char == ord('s'):                      # Stop all motors of Robot
 			io.output(RightM1DIR,False)
 			RightM1pwm.ChangeDutyCycle(0)
 			io.output(LeftM1DIR,False)
@@ -113,7 +118,7 @@ try:
 			RightM2pwm.ChangeDutyCycle(0)
 			io.output(LeftM2DIR,False)
 			LeftM2pwm.ChangeDutyCycle(0)
-		elif char == ord('r'):
+		elif char == ord('r'):                       # Make robot do 360 degree rotation from same position
 			io.output(RightM1DIR,False)
 			RightM1pwm.ChangeDutyCycle(100)
 			io.output(LeftM1DIR,True)
