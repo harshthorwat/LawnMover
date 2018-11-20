@@ -1,6 +1,6 @@
 # Following is the list of components required
 
-# You can buy components as per your convineance/prefered site
+## You can buy components as per your convineance/prefered site
 
 1. Raspberrypi (Quantity 1)
 https://robu.in/product/raspberry-pi-3-model-b-bcm2837b0-soc-iot-poe-enabled/
@@ -32,5 +32,5 @@ https://robu.in/product/smartelex-15d-dual-channel-dc-motor-driver/
 10. L298 Motor driver (Quantity 1)
 https://robu.in/product/l298n-dual-h-bridge-dc-stepper-motor-driver-controller-module/
 
-"The Robot Design is porvided in design part"
+### The Robot Design is porvided in design part
 https://github.com/harshthorwat/LawnMover/tree/master/Robot%20Design
