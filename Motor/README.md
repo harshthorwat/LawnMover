@@ -9,7 +9,7 @@
 ## Use 's' to stop all the Motors
 ## Use Arrow keys for movement of robot
 
-<img src=Gif/arrow.jpg>
+<img src=Gif/arrow.jpg width=300 height=300>
 
 [](https://github.com/harshthorwat/LawnMover/blob/master/Motor/Gif/MotorDemo.gif)
 
