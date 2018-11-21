@@ -4,4 +4,4 @@
 
 ### 1. Motor
 
-<img src=Image/Motor1>
+<img src=Image/Motor1.jpg>
