@@ -2,4 +2,6 @@
 
 # Following are some images of robot
 
-##1. Motor##
+### 1. Motor
+
+<img src=Image/Motor1>
