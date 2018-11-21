@@ -13,5 +13,7 @@
 
 ## Motor Demo
 
+<img src=Git/MotorDemo.gif>
+
 [](https://github.com/harshthorwat/LawnMover/blob/master/Motor/Gif/MotorDemo.gif)
 
