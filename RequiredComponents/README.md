@@ -2,7 +2,7 @@
 
 ## You can buy components as per your convineance/prefered site
 
-1. Raspberrypi (Quantity 1)  [view](https://robu.in/product/raspberry-pi-3-model-b-bcm2837b0-soc-iot-poe-enabled/)
+1. [Raspberrypi](https://robu.in/product/raspberry-pi-3-model-b-bcm2837b0-soc-iot-poe-enabled/) (Quantity 1)  
 
 2. Motors 200 rpm (Quantity 4)
 [view](https://robu.in/product/johnson-motor-made-india-200-rpm/)
